@@ -4,7 +4,7 @@
 #include <iostream>
 #include <algorithm>
 
-void DotenvLoader::load(const char *path) {
+void dotenvloader::load(const char *path) {
     auto lines = loadFile(path);
 
     for (const auto &line: lines) {
@@ -12,7 +12,7 @@ void DotenvLoader::load(const char *path) {
     }
 }
 
-void DotenvLoader::load() {
+void dotenvloader::load() {
     auto lines = loadFile();
 
     for (const auto &line: lines) {
@@ -20,7 +20,7 @@ void DotenvLoader::load() {
     }
 }
 
-std::vector<std::string> DotenvLoader::loadFile(const char *path) {
+std::vector<std::string> dotenvloader::loadFile(const char *path) {
     std::ifstream file(path);
 
     std::vector<std::string> lines;
@@ -51,7 +51,7 @@ std::vector<std::string> DotenvLoader::loadFile(const char *path) {
     }
 }
 
-void DotenvLoader::parseLine(const std::string &line) {
+void dotenvloader::parseLine(const std::string &line) {
     std::string key;
     std::string value;
 
