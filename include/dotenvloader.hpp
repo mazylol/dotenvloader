@@ -4,7 +4,7 @@
 #include <vector>
 #include <string>
 
-class DotenvLoader {
+class dotenvloader {
 private:
     static std::vector<std::string> loadFile(const char *path = ".env");
     static void parseLine(const std::string &line);
